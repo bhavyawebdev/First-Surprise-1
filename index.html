@@ -37,34 +37,7 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Floating Dhanteras elements everywhere */
-        .floating-element {
-            position: fixed;
-            font-size: 1.5rem;
-            animation: floatElement 15s linear infinite;
-            pointer-events: none;
-            z-index: 1;
-            opacity: 0.6;
-            will-change: transform;
-            transform: translateZ(0);
-        }
 
-        @keyframes floatElement {
-            0% {
-                transform: translate3d(0, 100vh, 0) rotate(0deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.6;
-            }
-            90% {
-                opacity: 0.6;
-            }
-            100% {
-                transform: translate3d(0, -100px, 0) rotate(360deg);
-                opacity: 0;
-            }
-        }
 
         /* Golden coin animation */
         .golden-coin {
@@ -696,43 +669,13 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
  </head>
- <body><!-- Floating Dhanteras elements -->
-  <div class="floating-element" style="left: 5%; animation-delay: 0s;">
-   🪔
-  </div>
-  <div class="floating-element" style="left: 15%; animation-delay: 1s;">
-   🪙
-  </div>
-  <div class="floating-element" style="left: 25%; animation-delay: 2s;">
-   ✨
-  </div>
-  <div class="floating-element" style="left: 35%; animation-delay: 3s;">
-   🏺
-  </div>
-  <div class="floating-element" style="left: 45%; animation-delay: 4s;">
-   💰
-  </div>
-  <div class="floating-element" style="left: 55%; animation-delay: 5s;">
-   🪔
-  </div>
-  <div class="floating-element" style="left: 65%; animation-delay: 6s;">
-   🌟
-  </div>
-  <div class="floating-element" style="left: 75%; animation-delay: 7s;">
-   🪙
-  </div>
-  <div class="floating-element" style="left: 85%; animation-delay: 8s;">
-   ✨
-  </div>
-  <div class="floating-element" style="left: 95%; animation-delay: 9s;">
-   🪔
-  </div>
+ <body>
   <main class="love-container"><!-- Opening Dhanteras Letter -->
    <section class="dhanteras-letter">
     <h1 class="dhanteras-title">For My <span class="diya-flame">🪔</span> <span id="her-name">Cute Mittar (Kriti)</span> <span class="diya-flame">🪔</span></h1>
     <p class="dhanteras-message" id="dhanteras-wish">May this Dhanteras bring you endless happiness and prosperity, my dear friend! Like these golden diyas light up the darkness, your smile lights up my world ✨🪔</p>
    </section><!-- Interactive Dhanteras Buttons -->
-   <section class="dhanteras-buttons"><button class="dhanteras-btn" onclick="giveCoin(this, '🪙 Here\'s a golden coin of luck just for you, Kriti!')"> 🪙 Golden Coin </button> <button class="dhanteras-btn" onclick="lightDiya(this, '🪔 May this diya bring light and joy to your life!')"> 🪔 Light Diya </button> <button class="dhanteras-btn" onclick="showBlessings(this, '🙏 May Goddess Lakshmi bless you with prosperity!')"> 🙏 Divine Blessings </button> <button class="dhanteras-btn" onclick="showTreasure(this, '💰 You are my most precious treasure, dear friend!')"> 💰 Treasure Box </button> <button class="dhanteras-btn" onclick="showRangoli(this, '🌺 Like beautiful rangoli, you make everything colorful!')"> 🌺 Rangoli Magic </button> <button class="dhanteras-btn" onclick="showFireworks(this, '🎆 Let\'s celebrate this beautiful festival together!')"> 🎆 Celebration </button> <button class="dhanteras-btn" onclick="showSweets(this, '🍬 Sweet wishes for my sweetest friend!')"> 🍬 Sweet Treats </button> <button class="dhanteras-btn" onclick="showProsperity(this, '✨ May your life be filled with golden moments!')"> ✨ Golden Wishes </button>
+   <section class="dhanteras-buttons"><button class="dhanteras-btn" onclick="giveCoin(this, '🪙 Here\'s a golden coin of luck just for you, Kriti!')"> 🪙 Golden Coin </button> <button class="dhanteras-btn" onclick="lightDiya(this, '🪔 May this diya bring light and joy to your life!')"> 🪔 Light Diya </button> <button class="dhanteras-btn" onclick="showBlessings(this, '🙏 May Goddess Lakshmi bless you with prosperity!')"> 🙏 Divine Blessings </button> <button class="dhanteras-btn" onclick="showTreasure(this, '💰 You are my most precious treasure, dear friend!')"> 💰 Treasure Box </button> <button class="dhanteras-btn" onclick="showRangoli(this, '🌺 Like beautiful rangoli, you make everything colorful!')"> 🌺 Rangoli Magic </button> <button class="dhanteras-btn" onclick="showFireworks(this, '🎆 Let\'s celebrate this beautiful festival together!')"> 🎆 Celebration </button> <button class="dhanteras-btn" onclick="showSweets(this, '🍬 Sweet wishes for my sweetest friend!')"> 🍬 Sweet Treats </button> <button class="dhanteras-btn" onclick="showProsperity(this, '✨ May your life be filled with golden moments!')"> ✨ Golden Wishes </button> <button class="dhanteras-btn healing-btn" onclick="healHeart(this)" style="background: linear-gradient(45deg, #ff1493, #ff69b4, #ffd1dc, #ff69b4, #ff1493); background-size: 300% 300%; border: 4px solid #dc143c; animation: healingPulse 1.5s ease-in-out infinite, healingShimmer 3s ease-in-out infinite; box-shadow: 0 0 40px rgba(255, 20, 147, 1), 0 0 80px rgba(255, 105, 180, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3); position: relative; overflow: hidden; font-size: 1.3rem; font-weight: 900; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); transform: scale(1.1);"> 💖✨ HEAL MY HEART ✨💖 </button>
    </section><!-- Special Memory Palace -->
    <section class="special-memory-palace">
     <div class="memory-palace-header">
@@ -879,16 +822,19 @@
    <section class="promise-box">
     <h2 class="promise-title">My Promise To You 💍</h2>
     <p class="promise-text" id="promise-message">I promise to always make you smile like this, to be your light in dark times, and to love you more each day. You deserve all the happiness in the world, my beautiful soul 💕</p>
-   </section><!-- Special Letter from Bhavya -->
-   <section class="dhanteras-letter" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(255, 215, 0, 0.95), rgba(255, 107, 53, 0.1)); border: 4px solid #8b4513;">
-    <h2 class="dhanteras-title" style="color: #8b4513; font-size: 2rem;">A Special Dhanteras Letter 💌</h2>
-    <div class="dhanteras-message" style="font-size: 1.2rem; line-height: 1.9; color: #654321; text-align: left; padding: 2rem;">
-     <p style="margin-bottom: 1.5rem;"><strong>My Dearest Kriti,</strong> 🪔</p>
-     <p style="margin-bottom: 1.5rem;">As the golden diyas illuminate our homes this Dhanteras, I wanted to take a moment to tell you how much your friendship means to me. Just like these sacred lamps drive away darkness, your presence in my life has brought nothing but light, joy, and endless laughter. You are truly one of the most precious treasures I could ever ask for - not made of gold or silver, but crafted from kindness, warmth, and the most beautiful soul I know.</p>
-     <p style="margin-bottom: 1.5rem;">This festival reminds us to be grateful for our blessings, and honestly, having you as my friend is the greatest blessing of all. Your smile is brighter than any diya, your laughter more valuable than any coin, and your friendship more precious than all the wealth in the world. May Goddess Lakshmi shower you with prosperity, happiness, and all the success you deserve, because if anyone deserves the very best in life, it's you, my dear friend.</p>
-     <p style="margin-bottom: 2rem;">So here's to celebrating not just Dhanteras, but celebrating the amazing person you are! May this festival bring you endless joy, may your dreams shine as bright as these golden diyas, and may our friendship continue to grow stronger with each passing day. Thank you for being the incredible, caring, and absolutely wonderful person that you are. You make every day feel like a celebration! 🌟✨</p>
-     <p style="text-align: center; font-weight: bold; color: #8b4513; font-size: 1.3rem;">Wishing you the happiest and most prosperous Dhanteras ever! 🪔💰<br><br>
-       With lots of love and warm wishes,<br><span style="color: #ff6b35; font-size: 1.4rem;">Your Friend, Bhavya 💕</span></p>
+   </section><!-- Heartfelt Letter for My Dearest Friend -->
+   <section class="dhanteras-letter" style="margin-top: 3rem; background: linear-gradient(135deg, rgba(255, 182, 193, 0.95), rgba(255, 240, 245, 0.9)); border: 4px solid #ff69b4; box-shadow: 0 20px 40px rgba(255, 105, 180, 0.4), 0 0 30px rgba(255, 20, 147, 0.3);">
+    <h2 class="dhanteras-title" style="color: #8b0000; font-size: 2.2rem;">💕 A Letter From My Heart 💕</h2>
+    <div class="dhanteras-message" style="font-size: 1.3rem; line-height: 2; color: #8b0000; text-align: left; padding: 2.5rem; font-family: 'Georgia', serif;">
+     <p style="margin-bottom: 2rem; font-size: 1.4rem; text-align: center; color: #dc143c;"><strong>To My Most Precious Friend, Kriti 🌸</strong></p>
+     <p style="margin-bottom: 2rem; text-indent: 2rem;">I don't even know where to begin... You know, sometimes life gives you people who become so important that you can't imagine your world without them. That's exactly what you are to me, Kriti. You're not just a friend - you're like the sister I never had, the sunshine that brightens my darkest days, and one of the most amazing people I've ever known. 💫</p>
+     <p style="margin-bottom: 2rem; text-indent: 2rem;">I've been thinking about how to tell you this, and honestly, words feel so small compared to what I feel in my heart. You have this incredible way of making everyone around you feel special and valued. Your laugh is like music that brightens any room, and your smile... it could literally light up the entire universe! ✨</p>
+     <p style="margin-bottom: 2rem; text-indent: 2rem;">I know you're going through a tough time right now, and it hurts to see you sad. But I want you to know something - you are SO much stronger than you realize. You are SO much more amazing, inside and out, than you give yourself credit for. You deserve all the happiness in the world, and I wish I could just wrap you in a warm hug and remind you how special you are. 🤗💖</p>
+     <p style="margin-bottom: 2rem; text-indent: 2rem;">This Dhanteras, while everyone is celebrating wealth and prosperity, I'm celebrating YOU. Because having you in my life is the greatest treasure I could ever ask for. Your friendship is worth more than all the gold in the world, and your happiness means so much to me. I promise you, my dear friend, that no matter what happens, I will always be here for you - through every storm, every rainbow, every tear, and every smile. 🌈</p>
+     <p style="margin-bottom: 2rem; text-indent: 2rem;">So please, my beautiful friend, remember that you are cared for deeply. Remember that you are precious, you are worthy, and you are absolutely amazing just the way you are. And whenever you feel down, just look at this message and remember that somewhere, your friend is thinking of you, wishing for your happiness, and sending you all the positive vibes! 💕</p>
+     <p style="text-align: center; font-weight: bold; color: #dc143c; font-size: 1.5rem; margin-top: 3rem; padding: 2rem; background: rgba(255, 255, 255, 0.7); border-radius: 20px; border: 2px solid #ff69b4;">You are my sunshine, my inspiration, and my dearest friend.<br>
+       You mean the world to me, Kriti! 💖🌸<br><br>
+       Forever and always your devoted friend,<br><span style="color: #ff1493; font-size: 1.6rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">Bhavya 💕✨</span></p>
     </div>
    </section><!-- Final Reveal -->
    <section class="final-reveal">
@@ -1005,6 +951,232 @@
             createProsperityAnimation(button);
             showDhanterasMessage(button, message);
             createGoldenShower(button);
+        }
+
+        // Special healing function for broken heart
+        function healHeart(button) {
+            // Create the most beautiful healing experience
+            createHealingAura(button);
+            showHealingMessage(button);
+            createHealingButterflies(button);
+            createHealingRainbow(button);
+            createHealingStars(button);
+            createHealingFlowers(button);
+            
+            // Transform the button temporarily
+            button.style.transform = 'scale(1.2)';
+            button.style.filter = 'brightness(1.5)';
+            button.textContent = '✨ Healing Magic Sent ✨';
+            
+            setTimeout(() => {
+                button.style.transform = '';
+                button.style.filter = '';
+                button.textContent = '💖 Heal My Heart 💖';
+            }, 3000);
+        }
+
+        // Create healing aura effect
+        function createHealingAura(button) {
+            const rect = button.getBoundingClientRect();
+            const aura = document.createElement('div');
+            aura.style.cssText = `
+                position: fixed;
+                left: ${rect.left + rect.width / 2 - 100}px;
+                top: ${rect.top + rect.height / 2 - 100}px;
+                width: 200px;
+                height: 200px;
+                background: radial-gradient(circle, rgba(255, 105, 180, 0.8), rgba(255, 182, 193, 0.6), rgba(255, 20, 147, 0.4), transparent);
+                border-radius: 50%;
+                z-index: 999;
+                animation: healingAuraPulse 4s ease-out forwards;
+                pointer-events: none;
+            `;
+            document.body.appendChild(aura);
+            
+            setTimeout(() => {
+                if (aura.parentNode) aura.remove();
+            }, 4000);
+        }
+
+        // Show special healing message
+        function showHealingMessage(button) {
+            const healingMessages = [
+                "💖 You are precious and deserve all the happiness in the world",
+                "🌸 You are stronger than you know, amazing friend",
+                "✨ This tough time will pass, and you will shine brighter than ever",
+                "🦋 You are healing and growing stronger every day",
+                "🌈 Better days are coming, my dear friend"
+            ];
+            
+            const message = healingMessages[Math.floor(Math.random() * healingMessages.length)];
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.style.cssText = `
+                position: fixed;
+                background: linear-gradient(135deg, rgba(255, 182, 193, 0.95), rgba(255, 240, 245, 0.95));
+                color: #8b0000;
+                padding: 2rem 2.5rem;
+                border-radius: 30px;
+                font-size: 1.3rem;
+                font-weight: bold;
+                z-index: 1000;
+                box-shadow: 0 20px 40px rgba(255, 105, 180, 0.6), 0 0 30px rgba(255, 20, 147, 0.4);
+                animation: healingMessageShow 6s ease-out forwards;
+                text-align: center;
+                border: 4px solid #ff69b4;
+                max-width: 400px;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+                line-height: 1.6;
+            `;
+            
+            const rect = button.getBoundingClientRect();
+            messageDiv.style.left = Math.max(10, Math.min(window.innerWidth - 420, rect.left + rect.width / 2 - 200)) + 'px';
+            messageDiv.style.top = Math.max(10, rect.top - 150) + 'px';
+            messageDiv.innerHTML = message;
+            
+            document.body.appendChild(messageDiv);
+            
+            setTimeout(() => {
+                if (messageDiv.parentNode) {
+                    messageDiv.remove();
+                }
+            }, 6000);
+        }
+
+        // Create healing butterflies
+        function createHealingButterflies(button) {
+            const rect = button.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            const butterflies = ['🦋', '🌸', '💕', '✨', '🌺'];
+            
+            for (let i = 0; i < 12; i++) {
+                setTimeout(() => {
+                    const butterfly = document.createElement('div');
+                    butterfly.style.cssText = `
+                        position: fixed;
+                        left: ${x}px;
+                        top: ${y}px;
+                        font-size: 2rem;
+                        pointer-events: none;
+                        z-index: 1000;
+                        animation: healingButterfly 5s ease-out forwards;
+                    `;
+                    butterfly.textContent = butterflies[Math.floor(Math.random() * butterflies.length)];
+                    
+                    const angle = (i / 12) * 2 * Math.PI;
+                    const distance = 150 + Math.random() * 100;
+                    const endX = x + Math.cos(angle) * distance;
+                    const endY = y + Math.sin(angle) * distance;
+                    
+                    butterfly.style.setProperty('--endX', endX + 'px');
+                    butterfly.style.setProperty('--endY', endY + 'px');
+                    
+                    document.body.appendChild(butterfly);
+                    
+                    setTimeout(() => {
+                        if (butterfly.parentNode) butterfly.remove();
+                    }, 5000);
+                }, i * 200);
+            }
+        }
+
+        // Create healing rainbow
+        function createHealingRainbow(button) {
+            const rect = button.getBoundingClientRect();
+            const rainbow = document.createElement('div');
+            rainbow.style.cssText = `
+                position: fixed;
+                left: ${rect.left + rect.width / 2 - 150}px;
+                top: ${rect.top - 100}px;
+                width: 300px;
+                height: 150px;
+                background: linear-gradient(90deg, 
+                    rgba(255, 0, 0, 0.8) 0%,
+                    rgba(255, 165, 0, 0.8) 16.66%,
+                    rgba(255, 255, 0, 0.8) 33.33%,
+                    rgba(0, 255, 0, 0.8) 50%,
+                    rgba(0, 0, 255, 0.8) 66.66%,
+                    rgba(75, 0, 130, 0.8) 83.33%,
+                    rgba(238, 130, 238, 0.8) 100%
+                );
+                border-radius: 150px 150px 0 0;
+                z-index: 999;
+                animation: healingRainbow 4s ease-out forwards;
+                pointer-events: none;
+                opacity: 0;
+            `;
+            document.body.appendChild(rainbow);
+            
+            setTimeout(() => {
+                if (rainbow.parentNode) rainbow.remove();
+            }, 4000);
+        }
+
+        // Create healing stars
+        function createHealingStars(button) {
+            const rect = button.getBoundingClientRect();
+            const stars = ['⭐', '🌟', '✨', '💫', '🌠'];
+            
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const star = document.createElement('div');
+                    star.style.cssText = `
+                        position: fixed;
+                        left: ${rect.left + Math.random() * rect.width}px;
+                        top: ${rect.top - 200}px;
+                        font-size: 1.5rem;
+                        pointer-events: none;
+                        z-index: 1000;
+                        animation: healingStarfall 6s ease-out forwards;
+                    `;
+                    star.textContent = stars[Math.floor(Math.random() * stars.length)];
+                    
+                    document.body.appendChild(star);
+                    
+                    setTimeout(() => {
+                        if (star.parentNode) star.remove();
+                    }, 6000);
+                }, i * 200);
+            }
+        }
+
+        // Create healing flowers
+        function createHealingFlowers(button) {
+            const rect = button.getBoundingClientRect();
+            const x = rect.left + rect.width / 2;
+            const y = rect.top + rect.height / 2;
+            const flowers = ['🌸', '🌺', '🌻', '🌷', '🌹', '💐', '🏵️'];
+            
+            for (let i = 0; i < 15; i++) {
+                setTimeout(() => {
+                    const flower = document.createElement('div');
+                    flower.style.cssText = `
+                        position: fixed;
+                        left: ${x}px;
+                        top: ${y}px;
+                        font-size: 2rem;
+                        pointer-events: none;
+                        z-index: 1000;
+                        animation: healingFlowerBloom 4s ease-out forwards;
+                    `;
+                    flower.textContent = flowers[Math.floor(Math.random() * flowers.length)];
+                    
+                    const angle = (i / 15) * 2 * Math.PI;
+                    const distance = 80 + Math.random() * 60;
+                    const endX = x + Math.cos(angle) * distance;
+                    const endY = y + Math.sin(angle) * distance;
+                    
+                    flower.style.setProperty('--endX', endX + 'px');
+                    flower.style.setProperty('--endY', endY + 'px');
+                    
+                    document.body.appendChild(flower);
+                    
+                    setTimeout(() => {
+                        if (flower.parentNode) flower.remove();
+                    }, 4000);
+                }, i * 150);
+            }
         }
 
         // Main Dhanteras message function
@@ -1911,6 +2083,130 @@
                 0%, 100% { transform: translateY(0); }
                 50% { transform: translateY(-10px); }
             }
+            
+            @keyframes healingPulse {
+                0%, 100% { 
+                    transform: scale(1.1); 
+                    box-shadow: 0 0 40px rgba(255, 20, 147, 1), 0 0 80px rgba(255, 105, 180, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3); 
+                }
+                50% { 
+                    transform: scale(1.18); 
+                    box-shadow: 0 0 60px rgba(255, 20, 147, 1), 0 0 120px rgba(255, 105, 180, 1), inset 0 0 30px rgba(255, 255, 255, 0.5); 
+                }
+            }
+            
+            @keyframes healingShimmer {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
+            
+            @keyframes healingMessageShow {
+                0% { transform: scale(0) rotateY(-90deg); opacity: 0; }
+                20% { transform: scale(1.1) rotateY(0deg); opacity: 1; }
+                80% { transform: scale(1) rotateY(0deg); opacity: 1; }
+                100% { transform: scale(0) rotateY(90deg); opacity: 0; }
+            }
+            
+            @keyframes healingAuraPulse {
+                0% { transform: scale(0); opacity: 0; }
+                25% { transform: scale(1); opacity: 0.8; }
+                50% { transform: scale(1.5); opacity: 0.6; }
+                75% { transform: scale(2); opacity: 0.4; }
+                100% { transform: scale(3); opacity: 0; }
+            }
+            
+            @keyframes healingButterfly {
+                0% { 
+                    transform: translate(0, 0) scale(0) rotate(0deg); 
+                    opacity: 0; 
+                }
+                20% { 
+                    transform: translate(calc(var(--endX, 0) * 0.2), calc(var(--endY, 0) * 0.2)) scale(1.2) rotate(72deg); 
+                    opacity: 1; 
+                }
+                40% { 
+                    transform: translate(calc(var(--endX, 0) * 0.5), calc(var(--endY, 0) * 0.3)) scale(1) rotate(144deg); 
+                    opacity: 1; 
+                }
+                60% { 
+                    transform: translate(calc(var(--endX, 0) * 0.7), calc(var(--endY, 0) * 0.6)) scale(1.1) rotate(216deg); 
+                    opacity: 1; 
+                }
+                80% { 
+                    transform: translate(calc(var(--endX, 0) * 0.9), calc(var(--endY, 0) * 0.8)) scale(1) rotate(288deg); 
+                    opacity: 1; 
+                }
+                100% { 
+                    transform: translate(var(--endX, 0), var(--endY, 0)) scale(0.3) rotate(360deg); 
+                    opacity: 0; 
+                }
+            }
+            
+            @keyframes healingRainbow {
+                0% { 
+                    transform: scale(0) translateY(50px); 
+                    opacity: 0; 
+                }
+                30% { 
+                    transform: scale(1) translateY(0); 
+                    opacity: 0.9; 
+                }
+                70% { 
+                    transform: scale(1.1) translateY(-10px); 
+                    opacity: 0.8; 
+                }
+                100% { 
+                    transform: scale(0.5) translateY(-50px); 
+                    opacity: 0; 
+                }
+            }
+            
+            @keyframes healingStarfall {
+                0% { 
+                    transform: translateY(0) rotate(0deg) scale(0); 
+                    opacity: 0; 
+                }
+                20% { 
+                    transform: translateY(100px) rotate(180deg) scale(1.2); 
+                    opacity: 1; 
+                }
+                50% { 
+                    transform: translateY(250px) rotate(360deg) scale(1); 
+                    opacity: 1; 
+                }
+                80% { 
+                    transform: translateY(400px) rotate(540deg) scale(1.1); 
+                    opacity: 1; 
+                }
+                100% { 
+                    transform: translateY(600px) rotate(720deg) scale(0.3); 
+                    opacity: 0; 
+                }
+            }
+            
+            @keyframes healingFlowerBloom {
+                0% { 
+                    transform: translate(0, 0) scale(0) rotate(0deg); 
+                    opacity: 0; 
+                }
+                25% { 
+                    transform: translate(calc(var(--endX, 0) * 0.3), calc(var(--endY, 0) * 0.3)) scale(1.3) rotate(90deg); 
+                    opacity: 1; 
+                }
+                50% { 
+                    transform: translate(calc(var(--endX, 0) * 0.6), calc(var(--endY, 0) * 0.6)) scale(1) rotate(180deg); 
+                    opacity: 1; 
+                }
+                75% { 
+                    transform: translate(calc(var(--endX, 0) * 0.8), calc(var(--endY, 0) * 0.8)) scale(1.2) rotate(270deg); 
+                    opacity: 1; 
+                }
+                100% { 
+                    transform: translate(var(--endX, 0), var(--endY, 0)) scale(0.4) rotate(360deg); 
+                    opacity: 0; 
+                }
+            }
         `;
         document.head.appendChild(style);
 
@@ -1984,5 +2280,5 @@
             }
         }, 4000);
     </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9900edaeb19a8fcd',t:'MTc2MDcxNTk4My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9906943f04708fcd',t:'MTc2MDc3NTIzNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
